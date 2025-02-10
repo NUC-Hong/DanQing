@@ -1,0 +1,140 @@
+page {
+  background-color: #f1f1f1;
+}
+
+/* 轮播图 */
+.margin {
+  margin: 20rpx;
+}
+
+swiper-item {
+  border-radius: 20rpx;
+}
+
+swiper-item image {
+  width: 100%;
+}
+
+/* 菜单栏 */
+.nav-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20rpx 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.nav image {
+  width: 40%;
+  background-color: white;
+  border-radius: 20rpx;
+  padding: 15rpx;
+}
+
+.nav text {
+  margin-top: 15rpx;
+  font-size: 30rpx;
+}
+
+/* 列表信息 */
+.box {
+  margin: 20rpx;
+}
+
+.list-title {
+  margin: 0 10rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.level {
+  display: flex;
+  flex-direction: row;
+}
+
+.row {
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  min-height: 200rpx;
+}
+
+.left-img {
+  width: 45%;
+}
+
+.left-img image {
+  width: 100%;
+  border-radius: 5rpx;
+  max-height: 200rpx;
+}
+
+.right-info {
+  width: 55%;
+  display: flex;
+  padding-left: 15rpx;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-title {
+  font-size: 30rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.right-gray {
+  font-size: 28rpx;
+  color: #909399;
+  margin-top: 5rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.car-dot {
+  font-size: 20rpx;
+  background-color: #f29100;
+  margin-right: 10rpx;
+  padding: 2rpx 5rpx;
+  color: white;
+}
+.red-label{
+  background-color:red;
+}
+
+.right-bot {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-bot view:nth-child(1) {
+  font-size: 28rpx;
+}
+
+.right-bot view:nth-child(2) {
+  color: #fa3534;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.no-more {
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 26rpx;
+  color: #909399;
+}

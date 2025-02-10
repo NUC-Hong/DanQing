@@ -1,0 +1,80 @@
+<view wx:if="{{ isExamine }}">
+  <swiper class="margin" indicator-dots="true" autoplay="true" interval="2000" duration="500" indicator-color="gray" indicator-active-color="white">
+  <block wx:for="{{imgList}}" wx:for-index="index" wx:for-item="item" wx:key="item">
+    <swiper-item>
+      <image src="{{item}}" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="box">
+  <view class="list-title">作品示例</view>
+  <scroll-view scroll-y="true" show-scrollbar="{{false}}" enhanced="{{true}}">
+    <block wx:for="{{demoList}}" wx:for-index="index" wx:for-item="item" wx:key="item">
+      <view class="level row" bind:tap="detailClick" data-item="{{item}}">
+        <view class="left-img">
+          <image src="{{item.coverUrl}}"></image>
+        </view>
+        <view class="right-info">
+          <view>
+            <view class="right-title">
+              <text class="{{item.colorClass}} car-dot">{{item.label}}</text>{{item.title}}
+            </view>
+            <view class="right-gray">{{item.date}}</view>
+          </view>
+          <view class="level right-bot">
+            <view>{{item.brand}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="no-more">我是有底线的呦~</view>
+  </scroll-view>
+</view>
+
+</view>
+
+<view wx:else>
+<!-- 轮播图 -->
+<swiper class="margin" indicator-dots="true" autoplay="true" interval="2000" duration="500" indicator-color="gray" indicator-active-color="white">
+  <block wx:for="{{imgList}}" wx:for-index="index" wx:for-item="item" wx:key="item">
+    <swiper-item>
+      <image src="{{item}}" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 菜单栏 -->
+<view class="nav-box">
+  <block wx:for="{{navList}}" wx:for-index="index" wx:for-item="item" wx:key="item">
+    <view class="nav" bind:tap="navClick" data-item="{{item}}">
+      <image src="{{item.src}}" mode="widthFix"></image>
+      <text>{{item.title}}</text>
+    </view>
+  </block>
+</view>
+<!-- 列表数据 -->
+<view class="box">
+  <view class="list-title">作品示例</view>
+  <scroll-view scroll-y="true" show-scrollbar="{{false}}" enhanced="{{true}}">
+    <block wx:for="{{dataList}}" wx:for-index="index" wx:for-item="item" wx:key="item">
+      <view class="level row" bind:tap="detailClick" data-item="{{item}}">
+        <view class="left-img">
+          <image src="{{item.coverUrl}}"></image>
+        </view>
+        <view class="right-info">
+          <view>
+            <view class="right-title">
+              <text class="{{item.colorClass}} car-dot">{{item.label}}</text>{{item.title}}
+            </view>
+            <view class="right-gray">{{item.date}}</view>
+          </view>
+          <view class="level right-bot">
+            <view>{{item.brand}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="no-more">我是有底线的呦~</view>
+  </scroll-view>
+</view>
+</view>

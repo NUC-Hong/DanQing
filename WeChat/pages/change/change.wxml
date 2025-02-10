@@ -1,0 +1,33 @@
+<!--pages/change/change.wxml-->
+
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">古画处理与创意生成小程序</view>
+    <view class="page__desc">图片尺寸变换 o(^▽^)o </view>
+  </view>
+<form bindsubmit="game">
+
+<!--选择照片1-->
+<view class="con_list">
+  <view class="list">
+    <view class="img_list">
+      <image class="img" show-menu-by-longpress src="{{img1}}"  mode="widthFix"></image>
+    </view>
+    <button style="width:130px" class="ch2"  plain="true"type="mini" bindtap="img1" >变换前</button>
+  </view>
+  <view class="list">
+    <view class="img_list">
+      <image class="img" show-menu-by-longpress src="{{img2}}"  mode="widthFix"></image>
+    </view>
+    <button style="width:130px" class="ch2"  plain="true"type="mini"  >变换后</button>
+  </view>
+</view>
+<!--按钮1-->
+<view class="addBtnView"> 
+<text decode>&nbsp;</text>
+  <button class="bidui" type="default"  plain="true"bindtap="game">无损变小</button> 
+  <button class="bidui" type="default"  plain="true"bindtap="game2">无损变大</button>
+</view>
+</form>
+<text>\n\n\n</text>
+</view>

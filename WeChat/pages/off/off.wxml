@@ -1,0 +1,150 @@
+<view wx:if="{{ isExamine }}">
+  <view class="button-row">
+    <button class="image-text-button" bindtap="gotocompress">
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/yasuotupian.png" class="image" ></image>
+      <text class="button-text">图像内存压缩</text>
+    </button>
+    <button class="image-text-button" bindtap="gotochange">
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/jieping.png" class="image"></image>
+      <text class="button-text">图像尺寸变换</text>
+    </button>
+  </view>
+</view>
+
+
+<!-- 正常显示页面 -->
+<view wx:else>
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+ <!-- 1 -->
+<view hidden="{{currentTab!==0}}">
+
+  <view class="button-row">
+    <button class="image-text-button" bindtap="gotoExpand">
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/static1/tuozhantubiao.jpg" class="image"></image>
+      <text class="button-text">古画拓展</text>
+    </button>
+    <button class="image-text-button" bindtap="gotoOld">
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/static1/liehenzhanshi.jpg" class="image"></image>
+      <text class="button-text">裂痕修复</text>
+    </button>
+  </view>
+
+  <view class="button-row">
+    <button class="image-text-button" bindtap="gotoColorize">
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/static1/shangsetubiao.jpg" class="image" ></image>
+      <text class="button-text">古画上色</text>
+    </button>
+    <button class="image-text-button" bindtap="gotopower">
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/tupianqingxi1.jpg" class="image"></image>
+      <text class="button-text">超分辨率实现</text>
+    </button>
+  </view>
+
+  <view class="button-row">
+    <button class="image-text-button" bindtap="gotocompress">
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/yasuo2.jpg" class="image" ></image>
+      <text class="button-text">古画内存压缩</text>
+    </button>
+    <button class="image-text-button" bindtap="gotochange">
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/chicunbianhua.png" class="image"></image>
+      <text class="button-text">古画尺寸变换</text>
+    </button>
+  </view>
+  <view class="button-row">
+    <button class="image-text-button" bindtap="gotoRepairV">
+      <!-- <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/zhuangxiu.png" class="image" ></image> -->
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/shipinshangse5.jpg" class="image" ></image>
+      <text class="button-text">黑白视频AI上色</text>
+    </button>
+    <button class="image-text-button" bindtap="gotoClearV">
+      <!-- <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/iconfontshipinguanli.png" class="image"></image> -->
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/shipinqingxi3.jpg" class="image"></image>
+      <text class="button-text">视频清晰度增强</text>
+    </button>
+  </view>
+</view>
+ 
+<!--2-->
+<view hidden="{{currentTab!==1}}">
+  <view class="button-row">
+    <button class="image-text-button" bindtap="gotoMoreStyle">
+      <!-- <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/yijianhuanlianicon.png" class="image"></image> -->
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/fenggebianhuan2.jpg" class="image"></image>
+      <text class="button-text">风格转换</text>
+    </button>
+    <button class="image-text-button" bindtap="gotoCartoon">
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/dongmanhua.jpg" class="image"></image>
+      <text class="button-text">古代人物动漫化</text>
+    </button>
+  </view>
+  <view class="button-row">
+    <button class="image-text-button" bindtap="gotostyle">
+      <!-- <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/tupianhuanlian.png" class="image"></image> -->
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/shuimo.jpg" class="image"></image>
+      <text class="button-text">水墨古风</text>
+    </button>
+    <button class="image-text-button" bindtap="gotoFaceChangeV">
+      <!-- <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/shipinhuanlian.png" class="image"></image> -->
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/shipinhuanlian.gif" class="image"></image>
+      <text class="button-text">视频换脸</text>
+    </button>
+  </view>
+  <view class="button-row">
+    <button class="image-text-button" bindtap="gotoMotion">
+      <!-- <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/icon-ea75.png" class="image"></image> -->
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/dongqilai.gif" class="image"></image>
+      <text class="button-text">古画人物动起来</text>
+    </button>
+    <button class="image-text-button" bindtap="gotofaceChange">
+      <!-- <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/huanlian.png" class="image"></image> -->
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/huanlian.jpg" class="image"></image>
+      <text class="button-text">创意换脸</text>
+    </button>
+  </view>
+  
+</view>
+ 
+<!--3-->
+<view hidden="{{currentTab!==2}}">
+ <!-- 添加一个外层容器用于控制内部按钮的排列 -->
+  <view class="button-row">
+    <button class="image-text-button" bindtap="gotoDraw">
+      <!-- <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/seban.png" class="image"></image> -->
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/shishenghua1.jpg" class="image"></image>
+      <text class="button-text">诗意画境（诗生画）</text>
+    </button>
+    <button class="image-text-button" bindtap="gotoDrawToText">
+      <!-- <image src="https://img.ixintu.com/download/jpg/202006/aed030035d3b2588e4ecd0fadefeb519_610_615.jpg!bg" class="image"></image> -->
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/huashengshi3.jpg" class="image"></image>
+      <text class="button-text">画意诗韵（画生诗）</text>
+    </button>
+  </view>
+
+  <view class="button-row">
+    <button class="image-text-button" bindtap="gotoPoster">
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/static1/Posteryanshi.png" class="image"></image>
+      <text class="button-text">国风海报生成</text>
+    </button>
+    <button class="image-text-button" bindtap="gotoImgToVedio">
+      <!-- <image src="https://img.ixintu.com/download/jpg/202006/aed030035d3b2588e4ecd0fadefeb519_610_615.jpg!bg" class="image"></image> -->
+      <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/static1/tushengshipin2.gif" class="image"></image>
+      <text class="button-text">古画生视频</text>
+    </button>
+  </view>
+
+  <view class="button-row">
+    <button class="image-text-button" bindtap="gotoPaintingAnalysis">
+      <!-- <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/static1/Posteryanshi.png" class="image"></image> -->
+      <text class="button-text">古画赏析AI顾问</text>
+    </button>
+    <button class="image-text-button" bindtap="gotoPaintingAnalysis">
+      <!-- <image src="https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/static1/tushengshipin2.gif" class="image"></image> -->
+      <text class="button-text">古画临摹助手</text>
+    </button>
+  </view>
+
+</view>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/change/change.wxml-->
+
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">古画处理与创意生成小程序</view>
+    <view class="page__desc">图片压缩 o(^▽^)o </view>
+  </view>
+<form bindsubmit="game">
+
+<!--选择照片1-->
+<view class="con_list">
+  <view class="list">
+    <view class="img_list">
+      <image class="img" src="{{img1}}" mode="widthFix"></image>
+    </view>
+      <view class="txt_list">
+        <button style="width:130px" class="ch1" plain="true" type="mini"  bindtap="img1">变换前</button>
+      </view>
+  </view>
+  <view class="list list2">
+    <view class="img_list">
+      <image class="img" show-menu-by-longpress  src="{{img2}}"  mode="widthFix"></image>
+    </view>
+    <button style="width:130px" class="ch2" type="mini"  plain="true" >变换后</button>
+  </view>
+</view>
+<!--按钮1-->
+<view class="addBtnView"> 
+<text decode>&nbsp;</text>
+  <button class="bidui" type="default" bindtap="game"  plain="true">像素压缩</button> 
+ 
+</view>
+</form>
+<text>\n\n\n</text>
+</view>

@@ -1,0 +1,88 @@
+<view wx:if="{{ isExamine }}">
+  <view class="page">
+  <view class="page__hd">
+    <view class="page__title">古画处理与创意生成小程序</view>
+    <view class="page__title">图片压缩1x</view>
+  </view>
+<form bindsubmit="game">
+
+<!--选择照片1-->
+<view class="con_list">
+  <view class="list">
+    <view class="img_list">
+      <image class="img" src="{{img2}}" mode="widthFix"></image>
+    </view>
+      <view class="txt_list">
+        <button style="width:130px" class="ch1" plain="true" type="mini"  bindtap="img1">变换前</button>
+      </view>
+  </view>
+  <view class="list list2">
+    <view class="img_list">
+      <image class="img" show-menu-by-longpress  src="{{img3}}"  mode="widthFix"></image>
+    </view>
+    <button style="width:130px" class="ch2" type="mini"  plain="true" >变换后</button>
+  </view>
+</view>
+<!--按钮1-->
+<view class="addBtnView"> 
+<text decode>&nbsp;</text>
+  <button class="bidui" type="default" bindtap="game"  plain="true">像素压缩</button> 
+ 
+</view>
+</form>
+<text>\n\n\n</text>
+</view>
+</view>
+
+<view wx:else>
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">古画处理与创意生成小程序</view>
+    <view class="page__desc">国风海报 o(^▽^)o </view>
+  </view>
+  <!-- <view>
+    <input class="input" name="userText" placeholder="请输入想要转换成图片的文字" bindinput="onInputText" value="{{text}}"/>
+  </view> -->
+<form bindsubmit="game">
+  <view class="input-container">
+    <view class="label">主标题:</view>
+  <textarea class="textarea1" placeholder="" bindinput="onInputText1" ></textarea>
+  </view>
+  <view class="input-container">
+    <view class="label">副标题:</view>
+  <textarea class="textarea1" placeholder="" bindinput="onInputText2" ></textarea>
+  </view>
+  <view class="input-container">
+    <view class="label">正 文：</view>
+  <textarea class="textarea2" placeholder="" bindinput="onInputText3" ></textarea>
+  </view>
+  <view class="input-container">
+    <view class="label">版 式：</view>
+  <textarea class="textarea1" placeholder="" bindinput="onInputText4" ></textarea>
+  </view>
+  <view class="input-container">
+    <view class="label">提示词:</view>
+  <textarea class="textarea1" placeholder="" bindinput="onInputText5" ></textarea>
+  </view>
+<!--生成照片-->
+</form>
+<text>\n</text>
+
+<view class="con_list">
+  <view class="list">
+    <view class="img_list">
+      <image class="img" show-menu-by-longpress src="{{img}}"  mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+
+<text>\n</text>
+
+<!--按钮-->
+<view class="addBtnView"> 
+<text decode>&nbsp;</text>
+  <button class="bidui" type="default"  plain="true"  bindtap="inputText">生成国风海报</button> 
+</view>
+<text>\n\n\n</text>
+</view>
+</view>

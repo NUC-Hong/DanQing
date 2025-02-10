@@ -1,0 +1,67 @@
+
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f1f1f1;
+  /* background-image: url('https://guhua-buc-1324634892.cos.ap-shanghai.myqcloud.com/static/background.jpg?sign=362f3a5d3094d1797f3c7e82c6dd44b6&t=1668690172'); */
+}
+.navbar{
+  flex: none;
+  display: flex;
+  background: #fff;
+}
+.navbar .item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+}
+.navbar .item.active{
+  color: #FFCC00;
+}
+.navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+  background: #FFCC00;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-text-button {
+  width: 48%; /* 调整以适应不同屏幕和需求，确保两个按钮加起来不超过100% */
+  aspect-ratio: 9 / 10; /* 保持正方形，如果需要调整比例可以修改 */
+  display: flex;
+  flex-direction: column; /* 图片在上，文字在下 */
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 10px; */
+  margin-right: 10px; /* 右边距，适用于行内的多个按钮 */
+  margin-bottom: 10px; /* 底边距，如果按钮是垂直排列的 */
+  margin-left: 10px;
+  margin-top: 10px;
+  /* 按钮透明 */
+  /* background-color: transparent; */
+
+}
+
+.image {
+  width: 120%; /* 图片宽度充满按钮 */
+  height: 120%; /* 自动调整高度保持宽高比 */
+   /* 图片与文字间的间隔 */
+   /* margin-bottom: 10px; */
+  /* margin-top: 10px; */
+}
+
+.button-text {
+  font-size: 14px; /* 文字大小根据需要调整 */
+  text-align: center; /* 文字居中显示 */
+}

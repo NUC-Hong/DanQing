@@ -1,0 +1,51 @@
+<view class="container">
+  <!-- Logo --> 
+  <view class="logo" wx:if="{{!isRegister}}">欢迎登陆</view> 
+  <view class="logo" wx:if="{{isRegister}}">注册账号</view> 
+  
+  <!-- 登录方式选择 -->
+  <view class="toggle-method" wx:if="{{!isRegister}}">
+    <button class="toggle-button" bindtap="switchToPassword" wx:if="{{!usePassword}}">使用密码登录</button> 
+    <button class="toggle-button" bindtap="switchToCode" wx:if="{{usePassword}}">使用验证码登录</button> 
+    <button class="register-button" bindtap="switchToRegister">注册</button> <!-- 注册按钮 -->
+  </view> 
+
+  <!-- 头像选择区域 -->
+  <view class="avatar-section" wx:if="{{isRegister}}">
+    <button open-type="chooseAvatar" class="avatar-button" bindchooseavatar="chooseAvatar">
+      <image class="avatar-image" src="{{avatar || 'https://default-avatar-url'}}" mode="widthFix"></image>
+    </button>
+    <text class="avatar-tip">点击上传头像</text>
+  </view>
+  
+  <!-- 邮箱输入框 --> 
+  <view class="input-container"> 
+    <input type="text" placeholder="请输入邮箱" bindinput="onEmailInput" class="input" /> 
+  </view> 
+
+  <!-- 验证码输入框 --> 
+  <view class="input-container" wx:if="{{!usePassword || isRegister}}"> 
+    <input type="text" placeholder="请输入验证码" bindinput="onCodeInput" class="input" /> 
+    <button class="verify-button" bindtap="getVerifyCode" disabled="{{!canGetCode}}">{{countdownText}}</button> 
+  </view> 
+
+  <!-- 密码输入框 --> 
+  <view class="input-container" wx:if="{{usePassword || isRegister}}"> 
+    <input type="password" placeholder="请输入密码" bindinput="onPasswordInput" class="input" /> 
+  </view> 
+  
+  <!-- 注册和返回登录按钮 -->
+  <view class="register-actions" wx:if="{{isRegister}}">
+    <button class="register-button" bindtap="onRegister">注册</button> 
+    <button class="return-button" bindtap="switchToLogin">返回登录</button>
+  </view>
+  
+  <!-- 登录按钮 -->
+  <button class="login-button" bindtap="onLogin" wx:if="{{!isRegister}}">登录</button> 
+  
+  <!-- 底部协议 -->
+  <view class="footer"> 
+    <view wx:if="{{!isRegister}}">登录即表示您同意 <text class="link">服务条款</text> 和 <text class="link">隐私政策</text></view>
+    <view wx:if="{{isRegister}}">注册即表示您同意 <text class="link">服务条款</text> 和 <text class="link">隐私政策</text></view>
+  </view> 
+</view>
