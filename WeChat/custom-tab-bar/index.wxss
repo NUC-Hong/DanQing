@@ -1,0 +1,7 @@
+/* custom-tab-bar/index.wxss */
+.tab{
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+  padding: 25rpx;
+}

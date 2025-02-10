@@ -1,0 +1,6 @@
+
+<cover-view class="tab">
+ <cover-view bind:tap="goTomenu" >主页</cover-view>
+ <cover-view bind:tap="goTofunction">功能</cover-view>
+ <cover-view bind:tap="goTomine">我的</cover-view>
+</cover-view>
