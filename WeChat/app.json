@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/off/off",
+    "pages/my/my",
+    "pages/stylechange/stylechange",
+    "pages/change/change",
+    "pages/power/power",
+    "pages/compress/compress",
+    "pages/old/old",
+    "pages/faceChange/faceChange",
+    "pages/toCartoon/toCartoon",
+    "pages/moreStyle/moreStyle",
+    "pages/colorize/colorize",
+    "pages/video/video",
+    "pages/videoChangeFace/videoChangeFace",
+    "pages/videoRepair/videoRepair",
+    "pages/videoClear/videoClear",
+    "custom-tab-bar/index",
+    "pages/search/search",
+    "pages/show/show",
+    "pages/Draw/Draw",
+    "pages/DrawToText/DrawToText",
+    "pages/expand/expand",
+    "pages/ImgToVedio/ImgToVedio",
+    "pages/Poster/Poster",
+    "pages/Login/Login",
+    "pages/register/register",
+    "pages/PaintingAnalysis/PaintingAnalysis"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2b4b6b",
+    
+    "navigationBarTitleText": "古画处理与创意生成",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "custom": false,
+    "list": [
+      {
+        "pagePath": "pages/show/show",
+        "text": "主页",
+        "iconPath": "/tabimages/menu.png",
+        "selectedIconPath": "/tabimages/active-menu.png"
+      },
+      {
+        "pagePath": "pages/off/off",
+        "text": "图像处理",
+        "iconPath": "/tabimages/function.png",
+        "selectedIconPath": "/tabimages/active-function.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 200000000
+  },
+  "lazyCodeLoading": "requiredComponents"
+}
