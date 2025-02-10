@@ -1,0 +1,13 @@
+<!--components/mybox/mybox.wxml-->
+<view>
+  <view bindtap="change" class="textcss">
+   <!--  <image src="{{imagesrc}}" class="imagecss"></image> -->
+    {{list}}
+    <image src="{{ishidden?imageJiantou1:imageJiantou2}}" class="imageJiantou" >
+    </image>
+    
+  </view>
+  <view wx:if="{{ishidden}}" class="smallview ">
+  <slot></slot>
+  </view>
+</view>

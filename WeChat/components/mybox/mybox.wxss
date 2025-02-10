@@ -1,0 +1,20 @@
+/* components/mybox/mybox.wxss */
+
+.myborder{
+  float: left;
+  border-bottom:10rpx #d1dcf1 solid;
+}
+.textcss{
+  margin-top: 3rpx;
+  margin-bottom: 3rpx;
+  font-size: 35rpx;
+  margin-left: 5rpx;
+}
+.imagecss{
+  width: 60rpx;
+  height: 60rpx;
+}
+.imageJiantou{
+  width: 30rpx;
+  height: 30rpx;
+}
